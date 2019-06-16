@@ -1,0 +1,29 @@
+{
+  "name": "@wasm-tool/wasi",
+  "version": "0.0.2",
+  "description": "Import WebAssembly modules that expose the WebAssembly System Interface (WASI)",
+  "main": "index.js",
+  "dependencies": {
+    "loader-utils": "^1.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasm-tool/wasi.git"
+  },
+  "keywords": [
+    "webpack",
+    "wasi",
+    "wasm",
+    "loader"
+  ],
+  "author": "Sven Sauleau <sven@sauleau.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wasm-tool/wasi/issues"
+  },
+  "homepage": "https://github.com/wasm-tool/wasi#readme"
+}
