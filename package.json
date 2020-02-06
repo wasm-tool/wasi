@@ -1,6 +1,6 @@
 {
   "name": "@wasm-tool/wasi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Import WebAssembly modules that expose the WebAssembly System Interface (WASI)",
   "main": "index.js",
   "dependencies": {},
