@@ -31,8 +31,3 @@ Include the following rule in your webpack configuration:
 ```
 
 We need to set the `type` to JavaScript to bypass webpack's wasm support (as a workaround, for now). Which will also prevent the loading to work correclty in non-web environements.
-
-Install the runtime dependecies:
-```
-npm install --save-dev @wasmer/wasmfs @wasmer/wasi
-```
