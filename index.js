@@ -20,7 +20,8 @@ module.exports = function(bin) {
       mkdirSync(publicPath);
   }
 
-  const wasmPath = join(publicPath, basename(this.resourcePath));
+  const filename = basename(this.resourcePath);
+  const wasmPath = join(publicPath, filename);
   writeFileSync(wasmPath, bin);
 
   return `
@@ -50,7 +51,7 @@ module.exports = function(bin) {
       }
 
       const wasi = new WASI({
-          args: ["${wasmPath}"],
+          args: ["${filename}"],
           env,
           bindings: {
             ...WASI.defaultBindings,
@@ -64,7 +65,7 @@ module.exports = function(bin) {
       };
 
       const { instance } =
-        await WebAssembly.instantiateStreaming(fetch("${wasmPath}"), imports);
+        await WebAssembly.instantiateStreaming(fetch("${filename}"), imports);
       wasi.start(instance);
 
       cb(instance.exports);
