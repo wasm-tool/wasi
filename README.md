@@ -8,6 +8,14 @@ Import WebAssembly modules that expose the WebAssembly System Interface (WASI).
 npm install --save-dev @wasm-tool/wasi
 ```
 
+In JavaScript:
+```js
+import("./example.wasm")
+  .then(exports => {
+      exports.someFunc();
+   });
+```
+
 ## Usage: webpack
 
 Include the following rule in your webpack configuration:
